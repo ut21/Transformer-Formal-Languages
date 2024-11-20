@@ -16,8 +16,8 @@ from gensim import models
 
 from src.components.rnns import RNNModel
 from src.components.transformers import TransformerModel, TransformerXLModel, SimpleTransformerModel
-from src.components.mogrifierLSTM import MogrifierLSTMModel
-from src.components.sa_rnn import SARNNModel
+# from src.components.mogrifierLSTM import MogrifierLSTMModel
+# from src.components.sa_rnn import SARNNModel
 
 from src.utils.sentence_processing import *
 from src.utils.logger import print_log, store_results

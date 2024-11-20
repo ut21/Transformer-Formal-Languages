@@ -55,7 +55,7 @@ def build_parser():
 	parser.add_argument('-cell_type', type=str, default='LSTM', choices= ['LSTM', 'GRU', 'RNN'],  help='RNN cell type, default: lstm')
 	# parser.add_argument('-use_attn', action='store_true', help='To use attention mechanism?')
 	# parser.add_argument('-attn_type', type=str, default='general', help='Attention mechanism: (general, concat), default: general')
-	parser.add_argument('-hidden_size', type=int, default=64, help='Number of hidden units in each layer')
+	parser.add_argument('-hidden_size', type=int, default=32, help='Number of hidden units in each layer')
 	parser.add_argument('-depth', type=int, default=1, help='Number of layers in each encoder and decoder')
 	parser.add_argument('-dropout', type=float, default=0.0, help= 'Dropout probability for input/output/state units (0.0: no dropout)')
 	# parser.add_argument('-emb_size', type=int, default=256, help='Embedding dimensions of encoder and decoder inputs')
@@ -85,7 +85,7 @@ def build_parser():
 	''' Transformer '''
 	parser.add_argument('-d_model', type=int, default=32, help='Embedding size in Transformer')
 	parser.add_argument('-d_ffn', type=int, default=64, help='Hidden size of FFN in Transformer')
-	parser.add_argument('-heads', type=int, default=1, help='Number of Attention heads in each layer')
+	parser.add_argument('-heads', type=int, default=4, help='Number of Attention heads in each layer')
 	parser.add_argument('-pos_encode', dest='pos_encode', action='store_true', help='Whether to use position encodings')
 	parser.add_argument('-no-pos_encode', dest='pos_encode', action='store_false', help='Whether to use position encodings')
 	parser.set_defaults(pos_encode=False)	
